@@ -1,0 +1,17 @@
+<div class="modusuario-body">
+  <div class="modusuario-container">
+    <h2>Modificar Usuario</h2>
+    <form (submit)="onSubmit()">
+      <div class="form-group">
+        <label for="name">Nombre:</label>
+        <input type="text" id="name" [(ngModel)]="form.name" name="name" required>
+      </div>
+      <div class="form-group">
+        <label for="email">Email:</label>
+        <input type="email" id="email" [(ngModel)]="form.email" name="email" required>
+      </div>
+      <button type="submit">Modificar</button>
+    </form>
+    <button (click)="navigateToMenu()" class="back-button">Regresar</button> <!-- Botón de regreso -->
+  </div>
+</div>

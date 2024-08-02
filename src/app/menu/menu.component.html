@@ -1,0 +1,20 @@
+<div class="menu-body" [class.menu-open]="isMenuOpen">
+  <button class="menu-toggle" (click)="toggleMenu()">☰</button>
+  <nav class="menu" [class.menu-open]="isMenuOpen">
+    <ul>
+      <li><a routerLink="/menu">Home</a></li>
+      <li (click)="toggleUserMenu()" class="dropdown">
+        <a href="javascript:void(0)">Usuarios</a>
+        <ul [class.show]="isUserMenuOpen">
+          <li><a routerLink="/modusuario">Ver Usuarios</a></li>
+        </ul>
+      </li>
+      <li (click)="toggleEventMenu()" class="dropdown">
+        <a href="javascript:void(0)">Eventos</a>
+        <ul [class.show]="isEventMenuOpen">
+          <li><a routerLink="/verdatos">Checar Eventos</a></li> <!-- Usa routerLink aquí -->
+        </ul>
+      </li>
+    </ul>
+  </nav>
+</div>
